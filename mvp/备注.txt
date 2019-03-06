@@ -1,0 +1,34 @@
+MVP架构 + retrofit2 + rxJava2 + dagger2
+
+dagger2 依赖注入，用于对象管理，降低程序耦合。
+dagger2基本概念，dagger是通过@Inject来定义对象的，该对象是由@Provides来提供的，@Provides只能在有注解@Module的类中定义，编译器去查找时是去@Commponent中查找。
+写法：1、先创建Module  2、创建Commpoent 3、ReBuild Project 4、通过生成的Commponent把Actvity\Fragment与Commponent绑定起来
+@Name("别名") ，用于注解一个Module中Provides了多个相同类型的对象
+注意：
+1、Provide 如果是单例模式 对应的Compnent 也要是单例模式
+2、inject(Activity act) 不能放父类
+3、即使使用了单例模式，在不同的Activity 对象还是不一样的,单例模式是有作用域限制的，与生命周期限制的，在activity中注入，则生命周期、作用域就是activity的生命周期，在application中注入，则生命周期、作用域为应用的生命周期
+4、依赖component， component之间的Scoped 不能相同，并且依赖的component必须定义@Scoped
+5、子类component 依赖父类的component ，子类component的Scoped 要小于父类的Scoped，Singleton的级别是Application
+6、多个Moudle 之间不能提供相同的对象实例
+7、Moudle 中使用了自定义的Scoped 那么对应的Compnent 使用同样的Scoped
+8、在不使用@Scoped时，每次注入的对象都会是一个新的不同对象。而@Scoped能限制被注入的对象，在同一个@Scoped的生命周期内，都只存在一个且只有一个对象。
+9、@Scoped跟名称无关，只跟Inject的位置和dependency有关
+
+@Scoped 参考网站：
+http://blog.zhaiyifan.cn/2016/03/27/android-new-project-from-0-p4/
+
+
+
+
+
+Support Annotations使用
+使用Support Annotations代替num。具体参见utils包下的WeekDaysEnum类
+
+
+leakcanary 内存泄漏工具
+在Application中进行注册
+
+
+各种第三方库
+https://github.com/SenhLinsh/Android-Hot-Libraries

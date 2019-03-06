@@ -1,0 +1,20 @@
+Retrofit2.0
+Retrofit 是一个 RESTful 的 HTTP 网络请求框架的封装。
+
+addConverterFactory：加入数据解析器
+数据解析器          Gradle依赖
+Gson               com.squareup.retrofit2:converter-gson:2.0.2
+Jackson            com.squareup.retrofit2:converter-jackson:2.0.2
+Simple XML         com.squareup.retrofit2:converter-simplexml:2.0.2
+Protobuf           com.squareup.retrofit2:converter-protobuf:2.0.2
+Moshi              com.squareup.retrofit2:converter-moshi:2.0.2
+Wire               com.squareup.retrofit2:converter-wire:2.0.2
+Scalars            com.squareup.retrofit2:converter-scalars:2.0.2
+
+addCallAdapterFactory：加入网络请求适配器
+
+网络请求适配器         Gradle依赖
+guava                com.squareup.retrofit2:adapter-guava:2.0.2
+Java8                com.squareup.retrofit2:adapter-java8:2.0.2
+rxjava               com.squareup.retrofit2:adapter-rxjava:2.0.2
+
