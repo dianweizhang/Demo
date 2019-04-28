@@ -32,3 +32,5 @@ leakcanary 内存泄漏工具
 
 各种第三方库
 https://github.com/SenhLinsh/Android-Hot-Libraries
+https://github.com/alibaba/UltraViewPager
+https://github.com/alibaba/vlayout
