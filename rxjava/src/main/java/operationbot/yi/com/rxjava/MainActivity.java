@@ -1,12 +1,19 @@
 package operationbot.yi.com.rxjava;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 
 import com.rxjava.retorfit.okhttp.demo.http.OnSuccessAndFaultSub;
 import com.rxjava.retorfit.okhttp.demo.listener.OnSuccessAndFaultListener;
 import com.rxjava.retorfit.okhttp.demo.model.WeatherModel;
+import com.rxjava.retorfit.okhttp.demo.view.activity.CreateOperatorActivity;
+import com.rxjava.retorfit.okhttp.demo.view.activity.FlatMapOperatorActivity;
+import com.rxjava.retorfit.okhttp.demo.view.activity.MapOperatorActivity;
+import com.rxjava.retorfit.okhttp.demo.view.activity.RxOperatorMainActivity;
+import com.rxjava.retorfit.okhttp.demo.view.activity.ZipOperatorActivity;
 
 import io.reactivex.Observable;
 import io.reactivex.ObservableEmitter;
@@ -37,7 +44,31 @@ public class MainActivity extends AppCompatActivity {
 
             }
         }));
+    }
 
+    public void create(View view){
+        Intent intent = new Intent(this, CreateOperatorActivity.class);
+        startActivity(intent);
+    }
+
+    public void flat(View view) {
+        Intent intent = new Intent(this, FlatMapOperatorActivity.class);
+        startActivity(intent);
+    }
+
+    public void map(View view) {
+        Intent intent = new Intent(this, MapOperatorActivity.class);
+        startActivity(intent);
+    }
+
+    public void rx(View view) {
+        Intent intent = new Intent(this, RxOperatorMainActivity.class);
+        startActivity(intent);
+    }
+
+    public void zip(View view) {
+        Intent intent = new Intent(this, ZipOperatorActivity.class);
+        startActivity(intent);
     }
 
     Disposable mDisposable;

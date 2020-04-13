@@ -23,6 +23,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name="com.rxjava.retorfit.okhttp.demo.view.activity.CreateOperatorActivity">
+        </activity>
+        <activity android:name="com.rxjava.retorfit.okhttp.demo.view.activity.FlatMapOperatorActivity">
+        </activity>
+        <activity android:name="com.rxjava.retorfit.okhttp.demo.view.activity.MapOperatorActivity"></activity>
+        <activity android:name="com.rxjava.retorfit.okhttp.demo.view.activity.RxOperatorMainActivity"></activity>
+        <activity android:name="com.rxjava.retorfit.okhttp.demo.view.activity.ZipOperatorActivity"></activity>
     </application>
 
 </manifest>
